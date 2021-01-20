@@ -1,3 +1,10 @@
+#translated to python 3 by Khwaja Yasir Muzib (library changes and few statements)
+#intend to add code to make it work for any dataset or pictures
+#initial python2 codebase written by Millin Gabani (UWaterloo)
+#dataset is provided by Steve Seitz, James Diebel, Daniel Scharstein 
+#and Rick Szeliski of Univesity of Washington,
+#Stanford University, Middlebury College and Microsoft Research respectively
+
 from math import sqrt
 import numpy as np
 import maxflow
@@ -6,7 +13,6 @@ from skimage import measure
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 from mpl_toolkits.mplot3d import Axes3D
 
-print("h")
 class Data:
     def __init__(self, data_set):
         self.data_set = data_set
@@ -311,5 +317,5 @@ big_voxels = [0.003, 0.003, 0.003]
 med_voxels = [0.002, 0.002, 0.002]
 small_voxels = [0.001, 0.001, 0.001]
 
-temple_hull_hr = VisualHull(temple, np.array(med_voxels))
+temple_hull_hr = VisualHull(temple, np.array(big_voxels))
 temple_hull_hr.run()
